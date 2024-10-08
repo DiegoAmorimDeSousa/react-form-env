@@ -17,7 +17,7 @@ const FormComponent: React.FC = () => {
         baseURL = `http://localhost:3334/webchat/continue-flow/${sessionKey}`;
         break;
       case 'hml':
-        baseURL = `https://wapphml.boteria.com.br/webchat/continue-flow/${sessionKey}`;
+        baseURL = `https://wapp.hmlbots.digitalcontact.cloud/webchat/continue-flow/${sessionKey}`;
         break;
       case 'prod':
         baseURL = `https://wapp.boteria.com.br/webchat/continue-flow/${sessionKey}`;
