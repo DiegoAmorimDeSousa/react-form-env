@@ -14,13 +14,13 @@ const FormComponent: React.FC = () => {
     let baseURL;
     switch (environment) {
       case 'local':
-        baseURL = `http://localhost:3334/webchat/continue-flow/${sessionKey}`;
+        baseURL = `http://localhost:3334/webhook/continue-flow/${sessionKey}`;
         break;
       case 'hml':
-        baseURL = `https://wapp.hmlbots.digitalcontact.cloud/webchat/continue-flow/${sessionKey}`;
+        baseURL = `https://wapp.hmlbots.digitalcontact.cloud/webhook/continue-flow/${sessionKey}`;
         break;
       case 'prod':
-        baseURL = `https://wapp.boteria.com.br/webchat/continue-flow/${sessionKey}`;
+        baseURL = `https://wapp.boteria.com.br/webhook/continue-flow/${sessionKey}`;
         break;
       default:
         baseURL = '';
