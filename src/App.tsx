@@ -43,6 +43,7 @@ const FormComponent: React.FC = () => {
       });
 
       if (response.ok) {
+        window.parent.postMessage('closeIframe', '*');
         alert('Dados enviados com sucesso!');
       } else {
         alert('Erro ao enviar os dados');
@@ -54,7 +55,6 @@ const FormComponent: React.FC = () => {
   };
 
   const handleWindowClose = () => {
-    console.log('Fechando iframe');
     window.parent.postMessage('closeIframe', '*');
   };
 
