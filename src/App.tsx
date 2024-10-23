@@ -55,7 +55,8 @@ const FormComponent: React.FC = () => {
   };
 
   const handleWindowClose = () => {
-    window.parent.postMessage('closeIframe', '*');
+    console.log('CLICLOU 3')
+    window.parent.postMessage('closeIframe');
   };
 
   return (
