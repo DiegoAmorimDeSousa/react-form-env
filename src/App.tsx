@@ -26,7 +26,7 @@ const FormComponent: React.FC = () => {
         baseURL = '';
     }
 
-    console.log('baseURL', baseURL)
+    console.log('baseURL', baseURL);
 
     const data = {
       name,
@@ -51,6 +51,11 @@ const FormComponent: React.FC = () => {
       alert('Erro na requisição');
       console.error('Erro:', error);
     }
+  };
+
+  const handleWindowClose = () => {
+    window.close();
+    // window.parent.postMessage('closeIframe', '*')
   };
 
   return (
@@ -91,6 +96,8 @@ const FormComponent: React.FC = () => {
         </div>
         <button type="submit">Enviar</button>
       </form>
+
+      <button onClick={handleWindowClose}>Fechar Página</button>
     </div>
   );
 };
@@ -99,7 +106,6 @@ const App: React.FC = () => {
   return (
     <Router>
       <Routes>
-        {/* Definindo a rota que captura a sessionKey da URL */}
         <Route path="/:sessionKey" element={<FormComponent />} />
       </Routes>
     </Router>
