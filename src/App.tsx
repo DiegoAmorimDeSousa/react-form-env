@@ -43,9 +43,9 @@ const FormComponent: React.FC = () => {
       });
 
       if (response.ok) {
-        window.parent.postMessage('closeIframe', '*');
         alert('Dados enviados com sucesso!');
       } else {
+        window.parent.postMessage('closeIframe', '*');
         alert('Erro ao enviar os dados');
       }
     } catch (error) {
