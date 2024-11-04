@@ -59,6 +59,16 @@ const FormComponent: React.FC = () => {
     window.parent.postMessage('closeIframe', '*');
   };
 
+  const handleWindowClose2 = () => {
+    console.log('CLICLOU 7')
+    window.close();
+  };
+
+  const handleWindowClose3 = () => {
+    console.log('CLICLOU 8')
+    document.close();
+  };
+
   return (
     <div className="App">
       <h1>Formulário de Envio</h1>
@@ -99,6 +109,8 @@ const FormComponent: React.FC = () => {
       </form>
 
       <button onClick={handleWindowClose}>Fechar Página</button>
+      <button onClick={handleWindowClose2}>FECHANDO COM window.close</button>
+      <button onClick={handleWindowClose3}>FECHANDO COM document.close</button>
     </div>
   );
 };
