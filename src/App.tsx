@@ -108,9 +108,9 @@ const FormComponent: React.FC = () => {
         <button type="submit">Enviar</button>
       </form>
 
-      <button onClick={handleWindowClose}>Fechar Página</button>
+      {/* <button onClick={handleWindowClose}>Fechar Página</button>
       <button onClick={handleWindowClose2}>FECHANDO COM window.close</button>
-      <button onClick={handleWindowClose3}>FECHANDO COM document.close</button>
+      <button onClick={handleWindowClose3}>FECHANDO COM document.close</button> */}
     </div>
   );
 };
